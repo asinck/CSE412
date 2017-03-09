@@ -92,6 +92,9 @@ CREATE TABLE plays
       ON UPDATE CASCADE,    
     FOREIGN KEY (person_birthdate) REFERENCES person (person_birthdate)
       ON DELETE CASCADE
+      ON UPDATE CASCADE,    
+    FOREIGN KEY (instrument_name) REFERENCES instrument (instrument_name)
+      ON DELETE CASCADE
       ON UPDATE CASCADE
   );
 
@@ -118,7 +121,7 @@ CREATE TABLE goes_on
     tour_name VARCHAR (50),
     tour_start_date DATE,
     band_is_headliner BIT,
-    PRIMARY KEY (band_name, band_start_date, tour_name, tour_start_date, band_is_headliner),
+    PRIMARY KEY (band_name, band_start_date, tour_name, tour_start_date),
     FOREIGN KEY (band_name) REFERENCES band (band_name)
       ON DELETE CASCADE
       ON UPDATE CASCADE,    
