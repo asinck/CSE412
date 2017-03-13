@@ -1,3 +1,10 @@
+-- This script generates a new database, called CSE412. It then makes
+-- tables.
+
+drop database if exists CSE412;
+create database CSE412;
+use CSE412;
+
 CREATE TABLE band
   (
     band_name VARCHAR (50),
@@ -104,7 +111,7 @@ CREATE TABLE concert
     band_start_date DATE,
     tour_name VARCHAR (50),
     tour_start_date DATE,
-    concert_time VARCHAR (10),
+    concert_time DATETIME,
     concert_day DATE,
     concert_city VARCHAR (50),
     concert_venue VARCHAR (50),
