@@ -1,0 +1,12 @@
+use CSE412;
+select count(*) as 'album_count:' from album;
+select count(*) as 'band_count:' from band;
+select count(*) as 'band_member_count:' from band_member;
+select count(*) as 'concert_count:' from concert;
+select count(*) as 'featured_artist_count:' from featured_artist;
+select count(*) as 'instrument_count:' from instrument;
+select count(*) as 'person_count:' from person;
+select count(*) as 'plays_count:' from plays;
+select count(*) as 'song_count:' from song;
+select count(*) as 'staff_count:' from staff;
+select count(*) as 'tour_count:' from tour;
