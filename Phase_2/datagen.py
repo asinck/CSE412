@@ -248,6 +248,7 @@ usedInstruments = []
 #snakecase to match the schema and indicate that it's an sql var.
 
 print "Loading %i bands." %NUM_BANDS
+print "Come back in five minutes."
 for bandNumber in range(NUM_BANDS):
 
     #generate band data
@@ -264,7 +265,7 @@ for bandNumber in range(NUM_BANDS):
     numBand_Member = generateInt(1, 10)
     for band_member in range(numBand_Member):
         #generate person data
-        person_name = generateName()
+        person_name = generatePersonName()
         person_birthdate = generateDate()
         command = "INSERT IGNORE INTO {} VALUES ('{}', '{}', '{}', '{}')".format("person", band_name, band_start_date, person_name, person_birthdate)
         cur.execute(command)
@@ -278,7 +279,7 @@ for bandNumber in range(NUM_BANDS):
     numStaff = generateInt(1, 10)
     for staff in range(numStaff):
         #generate person data
-        person_name = generateName()
+        person_name = generatePersonName()
         person_birthdate = generateDate()
         command = "INSERT IGNORE INTO {} VALUES ('{}', '{}', '{}', '{}')".format("person", band_name, band_start_date, person_name, person_birthdate)
         cur.execute(command)
@@ -292,7 +293,7 @@ for bandNumber in range(NUM_BANDS):
     numPlays = generateInt(1, 5)
     for Plays in range(numPlays):
         #generate person data
-        person_name = generateName()
+        person_name = generatePersonName()
         person_birthdate = generateDate()
         command = "INSERT IGNORE INTO {} VALUES ('{}', '{}', '{}', '{}')".format("person", band_name, band_start_date, person_name, person_birthdate)
         cur.execute(command)
@@ -361,7 +362,7 @@ for bandNumber in range(NUM_BANDS):
 
 
     # scope.pop()
-    print "%2.2f%% done." %(((bandNumber*1.0)/NUM_BANDS)*100)
+#    print "%2.2f%% done." %(((bandNumber*1.0)/NUM_BANDS)*100)
 
 print "Data generation completed."
 
