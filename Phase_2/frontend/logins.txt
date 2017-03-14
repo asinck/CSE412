@@ -1,0 +1,10 @@
+DB Logins
+Hostname: localhost
+DB Name: cse412database
+UN: teamlogin412
+PW: mOuh~5Og3tHC
+
+FTP
+Host: michaeljscott.net
+UN: cse412
+PW: gxivmuqAlx,t

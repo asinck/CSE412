@@ -1,0 +1,26 @@
+body {
+    background: #fafafa;
+}
+h1 {
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+input {
+    width: 100%;
+    height: 34px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #777;
+}
+.btn {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.query-window {
+    border-right: 1px solid black;
+}
+#submitInsertBand {
+    margin-top: 10px;
+}
