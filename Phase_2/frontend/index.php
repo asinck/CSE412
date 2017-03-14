@@ -47,6 +47,11 @@
 							<button class="btn" id="submitQuery">Run Query</button>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-3">
+							<button class="btn" id="countTables">Count Tables</button>
+						</div>
+					</div>
 				</div>
 				<div class="results-window col-sm-6">
 					<h3>Responses from Query</h3>
@@ -54,6 +59,7 @@
 				</div>
 			</div>
 		</div>
+		<div class="container disclaimer"><p>*Information is randomly generated. An effort was made to prevent inappropriate entries. Any instance of inappropriate names is unintentional.</p></div>
 	</section>
 </body>
 
