@@ -173,7 +173,7 @@ DECLARE song_count INTEGER;
     IF song_count < 2
 		THEN
 			UPDATE album a SET a.album_type = 0 WHERE a.album_name = new.album_name AND a.band_name = new.band_name;
-	ELSEIF soung_count < 6 THEN
+	ELSEIF song_count < 6 THEN
 		UPDATE album a SET a.album_type = 1 WHERE a.album_name = new.album_name AND a.band_name = new.band_name;
 	ELSE
 		UPDATE album a SET a.album_type = 2 WHERE a.album_name = new.album_name AND a.band_name = new.band_name;
