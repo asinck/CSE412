@@ -362,7 +362,7 @@ for bandNumber in range(NUM_BANDS):
 
 
     # scope.pop()
-#    print "%2.2f%% done." %(((bandNumber*1.0)/NUM_BANDS)*100)
+    print "%2.2f%% done." %(((bandNumber*1.0)/NUM_BANDS)*100)
 
 print "Data generation completed."
 
