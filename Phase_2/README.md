@@ -4,7 +4,11 @@
 
 ### Generating Data
 
-To generate the data, just run `./datagen.sh` (after reading this readme). This will do several things:
+There are two ways of getting the data:
+
+First, you can import it from the database dump in `db_backup.sql`.
+
+Alternatively, to generate the data, just run `./datagen.sh` (after reading this readme). This may take a while, and will do several things:
 
 -   Prompt for a database username and password.
 
@@ -16,8 +20,6 @@ To generate the data, just run `./datagen.sh` (after reading this readme). This 
 -   Run the data generation python script, based on the data files. This uses a seed so that the same random data can be generated again.
 -   Delete the data files. Note that the `.zip` fill will remain.
 
-
-Data generation took a little less than five minutes on my computer.
 
 The following numbers of rows were generated for the following tables:
 
