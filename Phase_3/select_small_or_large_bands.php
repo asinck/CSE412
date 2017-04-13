@@ -12,7 +12,7 @@ $response = "ERROR: no accetable parameters were set.";
 // get user input
 if( isset( $_GET['input'] ) ){
 
-	if (strcmp($var1, $var2) !== 0)
+	
 		if(strcmp($_GET['input'], "large") ==0 || strcmp($_GET['input'], "Large") ==0 )
 		{
 			$sql = "SELECT COUNT(person_name)NUMBER_OF_STAFF, band_name AS BAND_NAME
