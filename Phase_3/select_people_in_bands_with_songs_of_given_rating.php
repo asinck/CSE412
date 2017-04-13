@@ -19,7 +19,7 @@ if( isset( $_GET['input'] ) ){
 			WHERE band_member.band_name IN (
 				SELECT song.band_name
 			    FROM song
-			    WHERE song.song_billboard_rating < " . $rating ." )";
+			    WHERE song.song_billboard_rating <= " . $rating ." )";
 
 		
 	$response = sql_get_query($sql);
