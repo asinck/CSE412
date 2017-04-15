@@ -3,36 +3,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
-   android:id="@+id/webview"
-   android:layout_width="fill_parent"
-   android:layout_height="fill_parent"
-              android:layout_alignParentLeft="true"
-              android:layout_alignParentStart="true"
-              android:layout_below="@+id/loadUrlButton">
+   <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/webview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
 
     </WebView>
 
-    <Button
-        android:id="@+id/loadUrlButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:text="Load"/>
-
-    <EditText
-        android:id="@+id/urlInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/loadUrlButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/loadUrlButton"
-        android:layout_toStartOf="@+id/loadUrlButton"
-        android:ems="10"
-        android:hint="url"
-        android:inputType="textUri"/>
 </RelativeLayout>
