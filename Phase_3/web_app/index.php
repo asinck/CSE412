@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
   <title>CSE412 Project Demo</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css"/>
@@ -17,6 +18,7 @@
 					<form id="insertMember">
 						<h3>Insert Band Member</h3>
 						<p>Add a band member to a band.</p>
+						<p>Note: Band Name and Band Start are a primary key for Band. Bands can share a name, but cannot share a name and start date.</p>
 						
 						<label>Band Name</label>
 						<input type="text" placeholder="Band Name" name="band_name" id="band_name" required>
@@ -33,7 +35,7 @@
 						<label>Member Start Date</label>
 						<input type="date" placeholder="Member Start Date" name="member_start_date" id="member_start_date" required>
 						
-						<label>Member End</label>
+						<label>Member End Date</label>
 						<input type="date" placeholder="Member End Date" name="member_end_date" id="member_end_date">
 						
 						<input type="submit" value="Insert Member">
@@ -72,8 +74,8 @@
 						<h3>Big/Small Bands</h3>
 						<p>Get bands that are bigger or smaller than 10 members</p>
 						<div class="row">
-							<div class="col-sm-12"><input type="radio" name="input" value="large">Big</div>
-							<div class="col-sm-12"><input type="radio" name="input" value="small">Small</div>
+							<div class="col-sm-12"><input type="radio" name="input" value="large"><span class="radio-label">Big</span></div>
+							<div class="col-sm-12"><input type="radio" name="input" value="small"><span class="radio-label">Small</span></div>
 							</div>
 						<input type="submit" value="Get Bands">
 					</form>

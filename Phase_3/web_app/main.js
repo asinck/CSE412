@@ -39,11 +39,11 @@ function insertMember( form ){
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
 			updateResponse(formatData);
-			$("#loading").hide(400);
+			setTimeout(function(){$("#loading").hide(400);},600);
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
 			updateResponse(errorThrown);
-			$("#loading").hide(400);
+			setTimeout(function(){$("#loading").hide(400);},600);
 		}
 	});
 }
@@ -58,11 +58,11 @@ function tourDate( form ){
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
 			updateResponse(formatData);
-			$("#loading").hide(400);
+			setTimeout(function(){$("#loading").hide(400);},600);
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
 			updateResponse(errorThrown);
-			$("#loading").hide(400);
+			setTimeout(function(){$("#loading").hide(400);},600);
 		}
 	});
 }
@@ -77,11 +77,11 @@ function ageMember( form ){
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
 			updateResponse(formatData);
-			$("#loading").hide(400);
+			setTimeout(function(){$("#loading").hide(400);},600);
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
 			updateResponse(errorThrown);
-			$("#loading").hide(400);
+			setTimeout(function(){$("#loading").hide(400);},600);
 		}
 	});
 }
@@ -96,11 +96,11 @@ function billboardMembers( form ){
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
 			updateResponse(formatData);
-			$("#loading").hide(400);
+			setTimeout(function(){$("#loading").hide(400);},600);
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
 			updateResponse(errorThrown);
-			$("#loading").hide(400);
+			setTimeout(function(){$("#loading").hide(400);},600);
 		}
 	});
 }
@@ -115,11 +115,11 @@ function bigBands( form ){
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
 			updateResponse(formatData);
-			$("#loading").hide(400);
+			setTimeout(function(){$("#loading").hide(400);},600);
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
 			updateResponse(errorThrown);
-			$("#loading").hide(400);
+			setTimeout(function(){$("#loading").hide(400);},600);
 		}
 	});
 }
@@ -201,4 +201,7 @@ function updateResponse(response){
 	else {
 		$("#responseContent").html(response);
 	}
+	$('html, body').animate({
+        scrollTop: $("#responseContent").offset().top - 60
+    }, 1000);
 }
