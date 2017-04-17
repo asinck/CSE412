@@ -1,5 +1,6 @@
 body {
-    background: #fafafa;
+    background: rgb(255, 202, 89);
+    color: black;
 }
 h1 {
     text-align: center;
@@ -13,6 +14,8 @@ input {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #777;
+    background: #990033;
+    color: white;
 }
 .btn {
     width: 100%;
@@ -54,4 +57,22 @@ span.radio-label {
 
 #loading img {
     max-width: 70vw;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: white;
+}
+
+pre {
+    background: #990033;
+    color: white;    
 }
