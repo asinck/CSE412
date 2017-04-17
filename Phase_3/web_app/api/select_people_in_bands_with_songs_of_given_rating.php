@@ -1,6 +1,6 @@
 <?php 
 
-require "../h.php";
+require 'h.php';
 
 
 //user enters a raiting and query gets a list of all the people who have been in a band with a song that had that rating or better

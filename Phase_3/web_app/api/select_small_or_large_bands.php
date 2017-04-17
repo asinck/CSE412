@@ -1,6 +1,6 @@
 <?php 
 
-require "../h.php";
+require 'h.php';
 
 
 //If user enters large they will get a list of all the bands who have more than ten members
@@ -18,14 +18,16 @@ if( isset( $_GET['input'] ) ){
 			$sql = "SELECT COUNT(person_name)NUMBER_OF_STAFF, band_name AS BAND_NAME
 				FROM staff
 				GROUP BY band_name
-				HAVING COUNT(person_name) > 10;";
+				HAVING COUNT(person_name) > 10
+				ORDER BY COUNT(person_name) DESC;";
 		}
 		else if(strcmp($_GET['input'], "small") ==0 || strcmp($_GET['input'], "Small") ==0 )
 		{
 			$sql = "SELECT COUNT(person_name)NUMBER_OF_STAFF, band_name AS BAND_NAME
 				FROM staff
 				GROUP BY band_name
-				HAVING COUNT(person_name) < 10;";
+				HAVING COUNT(person_name) < 10
+				ORDER BY COUNT(person_name);";
 		}
 	
 		

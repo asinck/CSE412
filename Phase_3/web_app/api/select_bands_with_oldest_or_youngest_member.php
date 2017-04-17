@@ -1,6 +1,6 @@
 <?php 
 
-require "../h.php";
+require 'h.php';
 
 
 //If user enters oldest they will get a list of all the bands who have the oldest members
@@ -14,7 +14,7 @@ if( isset( $_GET['input'] ) ){
 
 		if(strcmp($_GET['input'], "oldest") ==0 || strcmp($_GET['input'], "Oldest") ==0 )
 		{
-			$sql = "SELECT bm.band_name
+			$sql = "SELECT  bm.band_name, bm.person_name, bm.person_birthdate
 					FROM band_member bm
 					WHERE bm.person_birthdate <= ALL (
 						SELECT bm2.person_birthdate
@@ -23,7 +23,7 @@ if( isset( $_GET['input'] ) ){
 		}
 		else if(strcmp($_GET['input'], "youngest") ==0 || strcmp($_GET['input'], "Youngest") ==0 )
 		{
-			$sql = "SELECT bm.band_name
+			$sql = "SELECT  bm.band_name, bm.person_name, bm.person_birthdate
 					FROM band_member bm
 					WHERE bm.person_birthdate >= ALL (
 						SELECT bm2.person_birthdate

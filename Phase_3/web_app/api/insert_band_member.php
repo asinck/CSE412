@@ -1,7 +1,7 @@
 <?php 
 
 
-require "../h.php";
+require 'h.php';
 
 //Add band member
 $response = "ERROR: Inputs improperly defined.";
