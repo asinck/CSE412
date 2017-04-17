@@ -87,6 +87,10 @@
 		</div>
 		<div class="container disclaimer"><p>*Information is randomly generated. An effort was made to prevent inappropriate entries. Any instance of inappropriate names is unintentional.</p></div>
 	</section>
+	<div id="loading">
+			<h3>Running Query</h3>
+		<img src="https://media.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif">
+	</div>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

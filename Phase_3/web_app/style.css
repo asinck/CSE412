@@ -28,3 +28,25 @@ span.radio-label {
     position: relative;
     top: -30px;
 }
+
+#loading {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    padding: 15px;
+    background: white;
+    border: 1px solid grey;
+    box-shadow: 3px 5px 14px rgba(0, 0, 0, 0.42);
+}
+
+#loading h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}

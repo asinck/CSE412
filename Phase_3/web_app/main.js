@@ -3,7 +3,7 @@ $(document).ready(onLoad);
 function onLoad(){
 
 	$("form").submit(function(e){
-
+		$("#loading").show(400);
 		e.preventDefault();
 		var id = $(this).attr("id");
 
@@ -39,9 +39,11 @@ function insertMember( form ){
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
 			updateResponse(formatData);
+			$("#loading").hide(400);
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
 			updateResponse(errorThrown);
+			$("#loading").hide(400);
 		}
 	});
 }
@@ -56,9 +58,11 @@ function tourDate( form ){
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
 			updateResponse(formatData);
+			$("#loading").hide(400);
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
 			updateResponse(errorThrown);
+			$("#loading").hide(400);
 		}
 	});
 }
@@ -73,9 +77,11 @@ function ageMember( form ){
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
 			updateResponse(formatData);
+			$("#loading").hide(400);
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
 			updateResponse(errorThrown);
+			$("#loading").hide(400);
 		}
 	});
 }
@@ -90,9 +96,11 @@ function billboardMembers( form ){
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
 			updateResponse(formatData);
+			$("#loading").hide(400);
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
 			updateResponse(errorThrown);
+			$("#loading").hide(400);
 		}
 	});
 }
@@ -107,9 +115,11 @@ function bigBands( form ){
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
 			updateResponse(formatData);
+			$("#loading").hide(400);
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
 			updateResponse(errorThrown);
+			$("#loading").hide(400);
 		}
 	});
 }
