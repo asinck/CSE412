@@ -32,9 +32,9 @@ function onLoad(){
 function insertMember( form ){
 	var data = $( form ).serialize();
 	$.ajax({
-		url : "api/insert_band_member.php",
+		url : "api/insert_band_member.php?" + data,
 		type: "GET",
-		data : data,
+		// data : data,
 
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
@@ -51,9 +51,9 @@ function insertMember( form ){
 function tourDate( form ){
 	var data = $( form ).serialize();
 	$.ajax({
-		url : "api/select_bands_with_given_tour_date.php",
+		url : "api/select_bands_with_given_tour_date.php?" + data,
 		type: "GET",
-		data : data,
+		// data : data,
 
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
@@ -70,9 +70,9 @@ function tourDate( form ){
 function ageMember( form ){
 	var data = $( form ).serialize();
 	$.ajax({
-		url : "api/select_bands_with_oldest_or_youngest_member.php",
+		url : "api/select_bands_with_oldest_or_youngest_member.php?" + data,
 		type: "GET",
-		data : data,
+		//data : data,
 
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
@@ -89,9 +89,9 @@ function ageMember( form ){
 function billboardMembers( form ){
 	var data = $( form ).serialize();
 	$.ajax({
-		url : "api/select_people_in_bands_with_songs_of_given_rating.php",
+		url : "api/select_people_in_bands_with_songs_of_given_rating.php?" + data,
 		type: "GET",
-		data : data,
+		//data : data,
 
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
@@ -108,9 +108,9 @@ function billboardMembers( form ){
 function bigBands( form ){
 	var data = $( form ).serialize();
 	$.ajax({
-		url : "api/select_small_or_large_bands.php",
+		url : "api/select_small_or_large_bands.php?" + data,
 		type: "GET",
-		data : data,
+		//data : data,
 
 		success: function(data, textStatus, jqXHR) {
 			var formatData = JSON.parse(data);
