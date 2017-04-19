@@ -11,6 +11,9 @@ function onLoad(){
 			case "insertMember":
 				insertMember( this );
 				break;
+			case "getBand":
+				getBand( this );
+				break;
 			case "tourDate":
 				tourDate( this );
 				break;
@@ -30,9 +33,30 @@ function onLoad(){
 
 
 function insertMember( form ){
+
 	var data = $( form ).serialize();
 	$.ajax({
 		url : "api/insert_band_member.php?" + data,
+		type: "GET",
+		// data : data,
+
+		success: function(data, textStatus, jqXHR) {
+			var formatData = JSON.parse(data);
+			updateResponse(formatData);
+			setTimeout(function(){$("#loading").hide(400);},600);
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			updateResponse(errorThrown);
+			setTimeout(function(){$("#loading").hide(400);},600);
+		}
+	});
+}
+
+function getBand( form ){
+
+	var data = $( form ).serialize();
+	$.ajax({
+		url : "api/get_band_members.php?" + data,
 		type: "GET",
 		// data : data,
 
@@ -104,6 +128,7 @@ function billboardMembers( form ){
 		}
 	});
 }
+
 
 function bigBands( form ){
 	var data = $( form ).serialize();

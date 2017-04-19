@@ -21,10 +21,10 @@
 						<p>Note: Band Name and Band Start are a primary key for Band. Bands can share a name, but cannot share a name and start date.</p>
 						
 						<label>Band Name</label>
-						<input type="text" placeholder="Band Name" name="band_name" id="band_name" required>
+						<input type="text" placeholder="Band Name" name="band_name" id="band_name" value="able mention" required>
 						
 						<label>Band Start</label>
-						<input type="date" placeholder="Band Start" name="band_start_date" id="band_start_date" required>
+						<input type="date" placeholder="Band Start" name="band_start_date" id="band_start_date" value="1988-09-11" required>
 						
 						<label>Person Name</label>
 						<input type="text" placeholder="Person Name" name="person_name" id="person_name" required>
@@ -39,6 +39,14 @@
 						<input type="date" placeholder="Member End Date" name="member_end_date" id="member_end_date">
 						
 						<input type="submit" value="Insert Member">
+					</form>
+
+					<form id="getBand">
+						<h3>Get Band Members</h3>
+						<p>Although the band name and start date are the key for a band, we'll just get band members by band name for convience.</p>
+						<label>Band Name</label>
+						<input type="text" placeholder="Band Name" name="band_name" id="band_name">
+						<input type="submit" value="Get Members">
 					</form>
 
 					<form id="tourDate">
@@ -65,7 +73,7 @@
 						<h3>Billboard Members</h3>
 						<p>Get all members that have produced a track that was rated a certain rating on the billboards.</p>
 						<div class="row">
-							<div class="col-sm-12">Rating: <input type="number" name="input" min="0" max="5000" step="100"></div>
+							<div class="col-sm-12">Rating: <input type="number" name="input" min="0" max="5000" ></div>
 						</div>
 						<input type="submit" value="Get Members">
 					</form>
